@@ -85,7 +85,7 @@ Docker Module: Tells the previous PIP module to install the necessary docker com
 Increase Memory/Use More Memory: A common issue with the ELK Docker image is to little memory. This help fix the issue to allow the server to launch
 Download and Launch ELK Container: This downloads the ELK docker container and initializes it with the specified ports being published
 
-The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance. (Images/DockerPs.jpg)
+The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance. (Images/Dockerps.png)
 
 
 ### Target Machines & Beats
