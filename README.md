@@ -146,9 +146,9 @@ cp ./UoT-Cybersecurity-Bootcamp-Project/ansible/install-elk.yml /etc/ansible
 - Update the /etc/ansible/hosts file to include IP Addresses for target machines. You can also specify groups using [] for tags as shown in the example below
 nano /etc/ansible/hosts
 [elk]
-10.2.0.5 ansible_python_interpreter=/usr/bin/python3
+ ansible_python_interpreter=/usr/bin/python3
 
-- Run the playbook, and navigate to http://localhost:5601 to check that the installation worked as expected.
+- Run the playbook, and navigate to http://<localhostip:5601> to check that the installation worked as expected.
 ansible-playbook /etc/ansible/install-elk.yaml
 
 
