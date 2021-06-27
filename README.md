@@ -91,10 +91,10 @@ The following screenshot displays the result of running `docker ps` after succes
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 
-*10.1.0.5
-*10.1.0.6 
-*10.1.0.9
-*10.3.0.4  
+- 10.1.0.5
+- 10.1.0.6 
+- 10.1.0.9
+- 10.3.0.4  
 
 We have installed the following Beats on these machines:
 
@@ -124,7 +124,7 @@ How do I specify which machine to install the ELK server on versus which to inst
 Under the Hosts file... /etc/ansible .. the yaml files contains groups - Webserves: Web1, Web 2, Web3  & Elk Server ..these yaml playbooks specify where filebeat & metricbeat applications need to be installed. 
 
 Which URL do you navigate to in order to check that the ELK server is running?
- *http://[your_elk_server_ip]:5601/app/kibana
+ - http://[your_elk_server_ip]:5601/app/kibana
 
 Specific commands the user will need to run to download the playbook, update the files, etc._
 > ansible.yml
