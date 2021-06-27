@@ -6,9 +6,9 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yaml file may be used to install only certain pieces of it, such as Filebeat.
 
-!(Ansible/install.elk.yml)
+- (Ansible/install-elk.yml)
 
-!(install-dvwa.yml)
+- (install-dvwa.yml)
 
 
 This document contains the following details:
@@ -123,11 +123,33 @@ Which file do you update to make Ansible run the playbook on a specific machine?
 How do I specify which machine to install the ELK server on versus which to install Filebeat on? 
 
 Under the Hosts file... /etc/ansible .. the yaml files contains groups - Webserves: Web1, Web 2, Web3  & Elk Server ..these yaml playbooks specify where filebeat & metricbeat applications need to be installed. 
-!(Ansible/metricbeat-playbook.yml)
-!(Ansible/filebeat-playbook.yml)
+- (Ansible/metricbeat-playbook.yml)
+- (Ansible/filebeat-playbook.yml)
+
 
 Which URL do you navigate to in order to check that the ELK server is running?
  - http://[your_elk_server_ip]:5601/app/kibana
+
+
+
+##Using the Playbook
+In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
+
+SSH into the control node and follow the steps below:
+
+- From a bash terminal with Git
+https://github.com/Sean66Raj/Project-13-Submission_Cyber-BootCamp
+
+- Copy the install.elk.yaml file (located in ansible directory) to /etc/ansible.
+cp ./UoT-Cybersecurity-Bootcamp-Project/ansible/install-elk.yml /etc/ansible
+
+- Update the /etc/ansible/hosts file to include IP Addresses for target machines. You can also specify groups using [] for tags as shown in the example below
+nano /etc/ansible/hosts
+[elk]
+10.2.0.5 ansible_python_interpreter=/usr/bin/python3
+
+- Run the playbook, and navigate to http://localhost:5601 to check that the installation worked as expected.
+ansible-playbook /etc/ansible/install-elk.yaml
 
 
 
