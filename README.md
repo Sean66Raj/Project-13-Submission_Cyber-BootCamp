@@ -6,9 +6,9 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yaml file may be used to install only certain pieces of it, such as Filebeat.
 
-(Ansible/intsall.elk.yml)
-(Ansible/metricbeat.yml)
-(Ansible/pentest.yml)
+!(Ansible/install.elk.yml)
+
+!(install-dvwa.yml)
 
 
 This document contains the following details:
@@ -114,7 +114,7 @@ SSH into the control node and follow the steps below:
 - Update the hosts file to include...groups of webservers (machines)
 - Run the playbook, and navigate to Elk Server (Kibana) to check that the installation worked as expected.
 
- 
+
 Playbooks are written in YAML format. YAML stands for Yet Another Markup Language. Playbooks are one of the core features of Ansible and tell Ansible what to execute. They are like a to-do list for Ansible that contains a list of tasks.
 install.elk.yml ... You copy it to /etc/ansible/
 
@@ -123,14 +123,11 @@ Which file do you update to make Ansible run the playbook on a specific machine?
 How do I specify which machine to install the ELK server on versus which to install Filebeat on? 
 
 Under the Hosts file... /etc/ansible .. the yaml files contains groups - Webserves: Web1, Web 2, Web3  & Elk Server ..these yaml playbooks specify where filebeat & metricbeat applications need to be installed. 
+!(Ansible/metricbeat-playbook.yml)
+!(Ansible/filebeat-playbook.yml)
 
 Which URL do you navigate to in order to check that the ELK server is running?
  - http://[your_elk_server_ip]:5601/app/kibana
-
-Specific commands the user will need to run to download the playbook, update the files, etc._
-> ansible.yml
-nano hosts
-ansible-playbook ansible.yml
 
 
 
